@@ -4,21 +4,19 @@
  
 -- Write SQL query here
 
--- SELECT * FROM country
--- WHERE region = 'Southern Europe'
--- ORDER BY population
--- LIMIT 1;
+SELECT * FROM country
+WHERE region = 'Southern Europe'
+ORDER BY population
+LIMIT 1;
 -- ANSWER:  code -> VAT
 
--- Clue #2: Now that we're here, we have insight that Carmen was seen attending language classes in
--- this country's officially recognized language. Check our databases and find out what language is
--- spoken in this country, so we can call in a translator to work with you.
+-- Clue #2: Now that we're here, we have insight that Carmen was seen attending language classes in this country's officially recognized language. Check our databases and find out what language is spoken in this country, so we can call in a translator to work with you.
 
 -- Write SQL query here
 
--- SELECT * FROM countrylanguage L
--- JOIN country C ON L.countrycode = C.code
--- WHERE C.code = 'VAT';
+SELECT * FROM countrylanguage L
+JOIN country C ON L.countrycode = C.code
+WHERE C.code = 'VAT';
 
 -- ANSWER: language -> Italian
 
@@ -28,10 +26,10 @@
 
 -- Write SQL query here
 
--- SELECT * FROM country C
--- JOIN countrylanguage L
--- ON C.code = L.countrycode
--- WHERE C.region = 'Southern Europe' AND L.language = 'Italian';
+SELECT * FROM country C
+JOIN countrylanguage L
+ON C.code = L.countrycode
+WHERE C.region = 'Southern Europe' AND L.language = 'Italian';
 
 -- ANSWER:  C.code -> SMR (San Marino)
 
